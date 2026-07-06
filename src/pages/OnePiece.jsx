@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+// Import your images from assets
 import pirateMonkey from '../assets/pirate-monkey.jpg'
 import monkeyDLuffy from '../assets/monkey-d-luffy.jpg'
 
@@ -19,7 +20,7 @@ export default function OnePiece() {
     if (!ctx) return
 
     const DPR = Math.min(window.devicePixelRatio || 1, 2)
-    const TRAIL_LENGTH = 30
+    const TRAIL_LENGTH = 60
     let HEAD_RADIUS = 190
     const OVERLAY = 'rgba(0,0,0,0.42)'
 
@@ -36,15 +37,26 @@ export default function OnePiece() {
     const offc = off.getContext('2d')
 
     function cover(img, cw, ch) {
-      const ir = img.width / img.height, cr = cw / ch
+      const ir = img.width / img.height
+      const cr = cw / ch
       let w, h, x, y
-      if (ir > cr) { h = ch; w = ch * ir; x = (cw - w) / 2; y = 0 }
-      else { w = cw; h = cw / ir; x = 0; y = (ch - h) / 2 }
+      if (ir > cr) {
+        h = ch
+        w = ch * ir
+        x = (cw - w) / 2
+        y = 0
+      } else {
+        w = cw
+        h = cw / ir
+        x = 0
+        y = (ch - h) / 2
+      }
       return [x, y, w, h]
     }
 
     function resize() {
-      const w = hero.offsetWidth, h = hero.offsetHeight
+      const w = hero.offsetWidth
+      const h = hero.offsetHeight
       canvas.width = w * DPR
       canvas.height = h * DPR
       off.width = w * DPR
@@ -78,22 +90,21 @@ export default function OnePiece() {
     let animId
 
     function draw() {
-      const w = hero.offsetWidth, h = hero.offsetHeight
-      smooth.x += (mouse.x - smooth.x) * 0.35
-      smooth.y += (mouse.y - smooth.y) * 0.35
+      const w = hero.offsetWidth
+      const h = hero.offsetHeight
+      smooth.x += (mouse.x - smooth.x) * 0.13
+      smooth.y += (mouse.y - smooth.y) * 0.13
 
       trail.unshift({ x: smooth.x, y: smooth.y })
       if (trail.length > TRAIL_LENGTH) trail.length = TRAIL_LENGTH
 
-      ctx.fillStyle = '#04060c'
-      ctx.fillRect(0, 0, w, h)
+      ctx.clearRect(0, 0, w, h)
       const cb = cover(bottom, w, h)
       ctx.drawImage(bottom, cb[0], cb[1], cb[2], cb[3])
       ctx.fillStyle = OVERLAY
       ctx.fillRect(0, 0, w, h)
 
-      offc.fillStyle = '#04060c'
-      offc.fillRect(0, 0, w, h)
+      offc.clearRect(0, 0, w, h)
       offc.globalCompositeOperation = 'source-over'
       for (let i = 0; i < trail.length; i++) {
         const t = 1 - i / trail.length
@@ -115,7 +126,14 @@ export default function OnePiece() {
 
       if (trail.length) {
         const head = trail[0]
-        const glow = ctx.createRadialGradient(head.x, head.y, 0, head.x, head.y, HEAD_RADIUS * 1.45)
+        const glow = ctx.createRadialGradient(
+          head.x,
+          head.y,
+          0,
+          head.x,
+          head.y,
+          HEAD_RADIUS * 1.45
+        )
         glow.addColorStop(0, 'rgba(255,245,215,0.30)')
         glow.addColorStop(0.45, 'rgba(244,196,48,0.14)')
         glow.addColorStop(1, 'rgba(0,0,0,0)')
@@ -128,7 +146,9 @@ export default function OnePiece() {
     }
 
     let loaded = 0
-    const onLoad = function () { if (++loaded === 2) draw() }
+    const onLoad = function () {
+      if (++loaded === 2) draw()
+    }
     bottom.onload = onLoad
     top.onload = onLoad
 
@@ -147,7 +167,9 @@ export default function OnePiece() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn one-piece">← Back</Link>
+      <Link to="/" className="back-btn one-piece">
+        ← Back
+      </Link>
       <div className="canvas-hero one-piece" ref={heroRef}>
         <canvas className="canvas-element" ref={canvasRef} />
 
@@ -159,18 +181,29 @@ export default function OnePiece() {
         <div className="canvas-content">
           <div className="canvas-left">
             <span className="canvas-eyebrow one-piece">Straw Hat Pirates</span>
-            <h1 className="canvas-title one-piece">MONKEY D.<br />LUFFY</h1>
-            <p className="canvas-desc">The boy who would be King of the Pirates. Rubber fists, an iron will, and a grin that never quits — chasing the world's greatest treasure.</p>
+            <h1 className="canvas-title one-piece">
+              MONKEY D.<br />LUFFY
+            </h1>
+            <p className="canvas-desc">
+              The boy who would be King of the Pirates. Rubber fists, an iron
+              will, and a grin that never quits — chasing the world's greatest
+              treasure.
+            </p>
             <button className="canvas-btn one-piece">Set Sail</button>
           </div>
           <div className="canvas-right">
             <span className="canvas-eyebrow">Joy Boy Awakened</span>
             <h1 className="canvas-title one-piece">GEAR<br />FIVE</h1>
-            <p className="canvas-desc">The Warrior of Liberation. Laughter becomes power, the world bends to imagination — the truest form of the Nika Devil Fruit.</p>
+            <p className="canvas-desc">
+              The Warrior of Liberation. Laughter becomes power, the world bends
+              to imagination — the truest form of the Nika Devil Fruit.
+            </p>
           </div>
         </div>
 
-        <div className="canvas-hint" ref={hintRef}>▸ MOVE ACROSS TO AWAKEN GEAR 5 ◂</div>
+        <div className="canvas-hint" ref={hintRef}>
+          ▸ MOVE ACROSS TO AWAKEN GEAR 5 ◂
+        </div>
       </div>
     </motion.div>
   )

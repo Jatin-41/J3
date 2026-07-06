@@ -19,7 +19,7 @@ export default function Naruto() {
     if (!ctx) return
 
     const DPR = Math.min(window.devicePixelRatio || 1, 2)
-    const TRAIL_LENGTH = 30
+    const TRAIL_LENGTH = 60
     let HEAD_RADIUS = 190
     const OVERLAY = 'rgba(0,0,0,0.42)'
 
@@ -36,15 +36,26 @@ export default function Naruto() {
     const offc = off.getContext('2d')
 
     function cover(img, cw, ch) {
-      const ir = img.width / img.height, cr = cw / ch
+      const ir = img.width / img.height
+      const cr = cw / ch
       let w, h, x, y
-      if (ir > cr) { h = ch; w = ch * ir; x = (cw - w) / 2; y = 0 }
-      else { w = cw; h = cw / ir; x = 0; y = (ch - h) / 2 }
+      if (ir > cr) {
+        h = ch
+        w = ch * ir
+        x = (cw - w) / 2
+        y = 0
+      } else {
+        w = cw
+        h = cw / ir
+        x = 0
+        y = (ch - h) / 2
+      }
       return [x, y, w, h]
     }
 
     function resize() {
-      const w = hero.offsetWidth, h = hero.offsetHeight
+      const w = hero.offsetWidth
+      const h = hero.offsetHeight
       canvas.width = w * DPR
       canvas.height = h * DPR
       off.width = w * DPR
@@ -78,22 +89,21 @@ export default function Naruto() {
     let animId
 
     function draw() {
-      const w = hero.offsetWidth, h = hero.offsetHeight
-      smooth.x += (mouse.x - smooth.x) * 0.35
-      smooth.y += (mouse.y - smooth.y) * 0.35
+      const w = hero.offsetWidth
+      const h = hero.offsetHeight
+      smooth.x += (mouse.x - smooth.x) * 0.13
+      smooth.y += (mouse.y - smooth.y) * 0.13
 
       trail.unshift({ x: smooth.x, y: smooth.y })
       if (trail.length > TRAIL_LENGTH) trail.length = TRAIL_LENGTH
 
-      ctx.fillStyle = '#0a0c0e'
-      ctx.fillRect(0, 0, w, h)
+      ctx.clearRect(0, 0, w, h)
       const cb = cover(bottom, w, h)
       ctx.drawImage(bottom, cb[0], cb[1], cb[2], cb[3])
       ctx.fillStyle = OVERLAY
       ctx.fillRect(0, 0, w, h)
 
-      offc.fillStyle = '#0a0c0e'
-      offc.fillRect(0, 0, w, h)
+      offc.clearRect(0, 0, w, h)
       offc.globalCompositeOperation = 'source-over'
       for (let i = 0; i < trail.length; i++) {
         const t = 1 - i / trail.length
@@ -115,7 +125,14 @@ export default function Naruto() {
 
       if (trail.length) {
         const head = trail[0]
-        const glow = ctx.createRadialGradient(head.x, head.y, 0, head.x, head.y, HEAD_RADIUS * 1.45)
+        const glow = ctx.createRadialGradient(
+          head.x,
+          head.y,
+          0,
+          head.x,
+          head.y,
+          HEAD_RADIUS * 1.45
+        )
         glow.addColorStop(0, 'rgba(255,140,0,0.30)')
         glow.addColorStop(0.45, 'rgba(255,69,0,0.14)')
         glow.addColorStop(1, 'rgba(0,0,0,0)')
@@ -128,8 +145,13 @@ export default function Naruto() {
     }
 
     let loaded = 0
-    const onLoad = function () { if (++loaded === 2) draw() }
-    const onError = function () { loaded++; if (loaded >= 2) draw() }
+    const onLoad = function () {
+      if (++loaded === 2) draw()
+    }
+    const onError = function () {
+      loaded++
+      if (loaded >= 2) draw()
+    }
     bottom.onload = onLoad
     top.onload = onLoad
     bottom.onerror = onError
@@ -150,7 +172,9 @@ export default function Naruto() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn naruto">← Back</Link>
+      <Link to="/" className="back-btn naruto">
+        ← Back
+      </Link>
       <div className="canvas-hero naruto" ref={heroRef}>
         <canvas className="canvas-element" ref={canvasRef} />
 
@@ -162,18 +186,32 @@ export default function Naruto() {
         <div className="canvas-content">
           <div className="canvas-left">
             <span className="canvas-eyebrow naruto">Hidden Leaf Village</span>
-            <h1 className="canvas-title naruto">NARUTO<br />UZUMAKI</h1>
-            <p className="canvas-desc">The boy who carried the Nine-Tails. From outcast to hero, his ninja way is to never give up — and become the Hokage everyone looks up to.</p>
+            <h1 className="canvas-title naruto">
+              NARUTO<br />UZUMAKI
+            </h1>
+            <p className="canvas-desc">
+              The boy who carried the Nine-Tails. From outcast to hero, his ninja
+              way is to never give up — and become the Hokage everyone looks up
+              to.
+            </p>
             <button className="canvas-btn naruto">Believe It!</button>
           </div>
           <div className="canvas-right">
             <span className="canvas-eyebrow">Rinnegan Awakened</span>
-            <h1 className="canvas-title naruto" style={{ fontSize: '62px' }}>SASUKE<br />UCHIHA</h1>
-            <p className="canvas-desc">The last Uchiha. A path of revenge turned redemption, wielding the power of the Sharingan, Rinnegan, and the unyielding will to protect.</p>
+            <h1 className="canvas-title naruto" style={{ fontSize: '62px' }}>
+              SASUKE<br />UCHIHA
+            </h1>
+            <p className="canvas-desc">
+              The last Uchiha. A path of revenge turned redemption, wielding the
+              power of the Sharingan, Rinnegan, and the unyielding will to
+              protect.
+            </p>
           </div>
         </div>
 
-        <div className="canvas-hint" ref={hintRef}>▸ MOVE ACROSS TO AWAKEN THE NINE-TAILS ◂</div>
+        <div className="canvas-hint" ref={hintRef}>
+          ▸ MOVE ACROSS TO AWAKEN THE NINE-TAILS ◂
+        </div>
       </div>
     </motion.div>
   )

@@ -601,7 +601,152 @@ footer {
     .canvas-left { left: 22px; bottom: 34px; width: 62%; }
     .canvas-right { right: 22px; width: 58%; }
     .canvas-title { font-size: 42px; }
-    .canvas-right .canvas-title { font-size: 34px; }
+    .canvas-right .canvas-title { font-size: 34px; }    
     .canvas-desc { font-size: 15px; }
     .canvas-btn { font-size: 14px; padding: 11px 18px; }
+}
+
+/* Add these fixes to your global CSS */
+
+/* Fix for card images - make them maintain aspect ratio */
+.anime-card .card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+  min-height: 200px;
+}
+
+/* Fix for card hover */
+.anime-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+/* Fix for canvas hero - make it full screen */
+.canvas-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  cursor: none;
+  background: #04060c;
+}
+
+.canvas-hero .canvas-element {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+/* Fix for back button on detail pages */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.back-btn.one-piece:hover {
+  background: rgba(244,196,48,0.2);
+  border-color: #F4C430;
+}
+
+.back-btn.naruto:hover {
+  background: rgba(255,140,0,0.2);
+  border-color: #ff8c00;
+}
+
+.back-btn.baki-hanma:hover {
+  background: rgba(0,180,100,0.2);
+  border-color: #00b464;
+}
+
+/* Responsive fixes for canvas */
+@media (max-width: 768px) {
+  .canvas-hero .canvas-left {
+    left: 20px;
+    bottom: 30px;
+    width: 55%;
+  }
+  
+  .canvas-hero .canvas-right {
+    right: 20px;
+    width: 50%;
+  }
+  
+  .canvas-hero .canvas-title {
+    font-size: 42px;
+  }
+  
+  .canvas-hero .canvas-right .canvas-title {
+    font-size: 34px;
+  }
+  
+  .canvas-hero .canvas-desc {
+    font-size: 15px;
+  }
+  
+  .canvas-hero .canvas-btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+  
+  .canvas-hero .canvas-logo .main-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .canvas-hero .canvas-left,
+  .canvas-hero .canvas-right {
+    width: 48%;
+  }
+  
+  .canvas-hero .canvas-title {
+    font-size: 28px;
+  }
+  
+  .canvas-hero .canvas-right .canvas-title {
+    font-size: 22px;
+  }
+  
+  .canvas-hero .canvas-desc {
+    font-size: 12px;
+  }
+  
+  .canvas-hero .canvas-btn {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+  
+  .canvas-hero .canvas-logo .main-title {
+    font-size: 28px;
+  }
+  
+  .canvas-hero .canvas-logo .sub-tag {
+    font-size: 10px;
+  }
 }

@@ -15,7 +15,12 @@ export default function AnimeCard({ title, description, image, path }) {
     >
       <div
         className="card-image"
-        style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ 
+          backgroundImage: `url(${image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       />
       <div className="card-content">
         <h3>{title}</h3>
