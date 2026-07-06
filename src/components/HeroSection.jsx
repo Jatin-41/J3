@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import './HeroSection.css'
 
 export default function HeroSection() {
   return (

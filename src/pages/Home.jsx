@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import './Home.css'
 import HeroSection from '../components/HeroSection.jsx'
 import AnimeCard from '../components/AnimeCard.jsx'
 import monkeyDLuffy from '../assets/monkey-d-luffy.jpg'

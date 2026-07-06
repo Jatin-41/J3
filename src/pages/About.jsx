@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import './About.css'
 
 export default function About() {
   return (

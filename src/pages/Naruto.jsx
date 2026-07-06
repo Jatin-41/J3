@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import './AnimeDetails.css'
 import sasuke1 from '../assets/sasuke-uchiha.png'
 import sasuke2 from '../assets/sasuke-uchiha2.png'
 

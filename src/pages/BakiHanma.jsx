@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import './AnimeDetails.css'
 import bakiSeries from '../assets/baki-hanma-anime-series-3840x2160-14925.jpg'
 import bakiThe from '../assets/baki-hanma-baki-the-3840x2160-25563.jpg'
 

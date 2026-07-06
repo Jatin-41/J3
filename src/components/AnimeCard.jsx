@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import './AnimeCard.css'
 
 export default function AnimeCard({ title, description, image, path }) {
   const navigate = useNavigate()
