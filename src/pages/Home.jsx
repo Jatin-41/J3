@@ -7,6 +7,8 @@ import bakiHanmaImg from '../assets/baki-hanma-anime-series-3840x2160-14925.jpg'
 import sasukeImg from '../assets/sasuke-uchiha.png'
 import kokushiboImg from '../assets/kokushibo-demon-.png'
 import attackOnTitanImg from '../assets/attack-on-titan1.jpg'
+import jujutsuKaisenImg from '../assets/jujutsu-kaisen-.jpg'
+import gokuImg from '../assets/goku-vs-vegeta-.jpg'
 
 export default function Home() {
   return (
@@ -42,15 +44,27 @@ export default function Home() {
           />
           <AnimeCard
             title="Demon Slayer"
-            description="The Crimson Slayer."
+            description="Twin brothers whose bond was shattered by jealousy, leading one to become history's greatest swordsman and the other its strongest demon."
             image={kokushiboImg}
-            path="/Demon Slayer"
+            path="/demon-slayer"
           />
            <AnimeCard
             title="Attack on Titan"
             description="Humanity fights for survival against terrifying giant humanoid creatures known as Titans."
             image={attackOnTitanImg}
             path="/attack-on-titan"
+          />
+           <AnimeCard
+            title="Jujutsu Kaisen"
+            description="A story of broken friendships, clashing ideals, and the battle between humanity and the King of Curses."
+            image={jujutsuKaisenImg}
+            path="/jujutsu-kaisen"
+          />
+          <AnimeCard
+            title="Goku & Vejeta"
+            description="Rival Saiyans whose fierce competition pushes each other to become stronger and protect the universe."
+            image={gokuImg}
+            path="/goku-vs-vejeta"
           />
         </div>
       </main>

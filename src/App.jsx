@@ -7,10 +7,12 @@ import About from './pages/About.jsx'
 import OnePiece from './pages/OnePiece.jsx'
 import BakiHanma from './pages/BakiHanma.jsx'
 import Naruto from './pages/Naruto.jsx'
+import DemonSlayer from './pages/DemonSlayer.jsx'
+import AttackOnTitan from './pages/AttackOnTitan.jsx'
 
 export default function App() {
   const location = useLocation()
-  const isDetailPage = location.pathname === '/one-piece' || location.pathname === '/baki-hanma' || location.pathname === '/naruto'
+  const isDetailPage = ['/one-piece', '/baki-hanma', '/naruto', '/demon-slayer', '/attack-on-titan'].includes(location.pathname)
 
   return (
     <>
@@ -22,6 +24,8 @@ export default function App() {
           <Route path="/one-piece" element={<OnePiece />} />
           <Route path="/baki-hanma" element={<BakiHanma />} />
           <Route path="/naruto" element={<Naruto />} />
+          <Route path="/demon-slayer" element={<DemonSlayer />} />
+          <Route path="/attack-on-titan" element={<AttackOnTitan />} />
         </Routes>
       </AnimatePresence>
       {!isDetailPage && <Footer />}
