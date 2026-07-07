@@ -10,6 +10,12 @@ import attackOnTitanImg from '../assets/attack-on-titan1.jpg'
 import jujutsuKaisenImg from '../assets/jujutsu-kaisen-.jpg'
 import gokuImg from '../assets/goku-vs-vegeta-.jpg'
 import classroomofEliteImg from '../assets/classroom-of-the-elite.jpg'
+import TokyoGhoulImg from '../assets/Kaneghoul.jpg'
+import ChainsawManImg from '../assets/chainsaw-man-denj-.jpg'
+import TokyoRevengersImg from '../assets/izana-kurokawa.jpg'
+import SoloLevelingImg from '../assets/sung-jinwoo-purple.jpg'
+import OnePunchManImg from '../assets/saitama-one-punch-man.jpg'
+
 
 export default function Home() {
   return (
@@ -72,6 +78,36 @@ export default function Home() {
             description="Ayanokoji Kiyotaka enters the prestigious Tokyo Advanced Nurturing High School, only to discover it's a brutal meritocracy where only the smartest survive and the weak are discarded."
             image={classroomofEliteImg}
             path="/classroom-of-the-elite"
+          />
+          <AnimeCard
+            title="Tokyo Ghoul"
+            description="A college student's life changes forever when he becomes a ghoul."
+            image={TokyoGhoulImg}
+            path="/tokyo-ghoul"
+          />
+          <AnimeCard
+            title="Chainsaw Man"
+            description="A young man bonds with a Chainsaw Devil and fights to protect humanity from dangerous demons."
+            image={ChainsawManImg}
+            path="/chainsaw-man"
+          />
+          <AnimeCard
+            title="Tokyo Revengers"
+            description="A gang leader finds his life in danger when he becomes the target of a rival gang."
+            image={TokyoRevengersImg}
+            path="/tokyo-revengers"
+          />
+          <AnimeCard
+            title="Solo Leveling"
+            description="Sung Jin-woo, the weakest hunter alive, discovers a system that allows him to level up and become the strongest."
+            image={SoloLevelingImg}
+            path="/solo-leveling"
+          />
+          <AnimeCard
+            title="One-Punch Man"
+            description="Saitama, a hero who can defeat any enemy with a single punch, struggles to find meaning in his strength."
+            image={OnePunchManImg}
+            path="/one-punch-man"
           />
         </div>
       </main>
