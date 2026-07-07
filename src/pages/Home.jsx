@@ -5,6 +5,8 @@ import AnimeCard from '../components/AnimeCard.jsx'
 import monkeyDLuffy from '../assets/monkey-d-luffy.jpg'
 import bakiHanmaImg from '../assets/baki-hanma-anime-series-3840x2160-14925.jpg'
 import sasukeImg from '../assets/sasuke-uchiha.png'
+import kokushiboImg from '../assets/kokushibo-demon-.png'
+import attackOnTitanImg from '../assets/attack-on-titan1.jpg'
 
 export default function Home() {
   return (
@@ -39,10 +41,16 @@ export default function Home() {
             path="/naruto"
           />
           <AnimeCard
+            title="Demon Slayer"
+            description="The Crimson Slayer."
+            image={kokushiboImg}
+            path="/Demon Slayer"
+          />
+           <AnimeCard
             title="Attack on Titan"
             description="Humanity fights for survival against terrifying giant humanoid creatures known as Titans."
-            image="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-            path="/aot"
+            image={attackOnTitanImg}
+            path="/attack-on-titan"
           />
         </div>
       </main>

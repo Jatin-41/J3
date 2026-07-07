@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import './AnimeDetails.css'
+import './OnePiece.css'
 // Import your images from assets
 import pirateMonkey from '../assets/pirate-monkey.jpg'
 import monkeyDLuffy from '../assets/monkey-d-luffy.jpg'
