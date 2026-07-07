@@ -12,10 +12,11 @@ import AttackOnTitan from './pages/AttackOnTitan.jsx'
 import JujutsuKaisen from './pages/JujutsuKaisen.jsx'
 import DragonBall from './pages/DragonBall.jsx'
 import ClassroomElite from './pages/ClassroomElite.jsx'
+import TokyoGhoul from './pages/TokyoGhoul.jsx'
 
 export default function App() {
   const location = useLocation()
-  const isDetailPage = ['/one-piece', '/baki-hanma', '/naruto', '/demon-slayer', '/attack-on-titan', '/jujutsu-kaisen', '/dragon-ball', '/classroom-of-the-elite'].includes(location.pathname)
+  const isDetailPage = ['/one-piece', '/baki-hanma', '/naruto', '/demon-slayer', '/attack-on-titan', '/jujutsu-kaisen', '/dragon-ball', '/classroom-of-the-elite', '/tokyo-ghoul'].includes(location.pathname)
 
   return (
     <>
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/jujutsu-kaisen" element={<JujutsuKaisen />} />
           <Route path="/dragon-ball" element={<DragonBall />} />
           <Route path="/classroom-of-the-elite" element={<ClassroomElite />} />
+          <Route path="/tokyo-ghoul" element={<TokyoGhoul />} /> 
         </Routes>
       </AnimatePresence>
       {!isDetailPage && <Footer />}

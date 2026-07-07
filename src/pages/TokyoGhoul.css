@@ -1,0 +1,250 @@
+/* ============================================
+   TOKYO GHOUL - Page Specific CSS
+   Colors: Crimson #cc2020 | Dark Red #8a0000 | White #f0e6e6
+   ============================================ */
+
+.canvas-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  cursor: none;
+  background: #0a0000;
+}
+
+.canvas-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  z-index: 20;
+}
+
+.canvas-hero.tokyo::before {
+  background: linear-gradient(90deg, transparent, #cc2020, #8a0000, #cc2020, transparent);
+}
+
+.canvas-element {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+.canvas-content {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.canvas-logo {
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  text-align: center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.canvas-logo .main-title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 52px;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.canvas-logo .main-title.tokyo {
+  color: #cc2020;
+  -webkit-text-stroke: 2px #0a0000;
+  text-shadow: 0 4px 0 #5a0000, 0 6px 0 #0a0000, 0 0 24px rgba(204,32,32,0.5);
+}
+
+.canvas-logo .sub-tag {
+  margin-top: 2px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.5em;
+  color: #f0e6e6;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  padding-left: 0.5em;
+}
+
+.canvas-left {
+  position: absolute;
+  bottom: 64px;
+  left: 64px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.canvas-right {
+  position: absolute;
+  top: 54%;
+  right: 64px;
+  transform: translateY(-50%);
+  width: 380px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+.canvas-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.canvas-eyebrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1.5px;
+}
+
+.canvas-eyebrow.tokyo { color: #cc2020; }
+.canvas-eyebrow.tokyo::before { background: #cc2020; }
+
+.canvas-eyebrow.tokyo-right {
+  color: #f0e6e6;
+  padding: 0 1.4rem 0 0;
+}
+.canvas-eyebrow.tokyo-right::before {
+  left: auto; right: 0;
+  background: #f0e6e6;
+}
+
+.canvas-title {
+  font-family: 'Bangers', cursive;
+  font-size: 78px;
+  line-height: 0.92;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.canvas-title.tokyo {
+  text-shadow: 3px 3px 0 #5a0000, 0 0 14px rgba(204,32,32,0.55), 0 0 40px rgba(204,32,32,0.3);
+}
+
+.canvas-right .canvas-title { font-size: 62px; }
+
+.canvas-right .canvas-title.tokyo-right {
+  text-shadow: 3px 3px 0 #5a0000, 0 0 16px rgba(204,32,32,0.4), 0 0 40px rgba(204,32,32,0.2);
+}
+
+.canvas-desc {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.82);
+}
+
+.canvas-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #f0e6e6;
+  cursor: pointer;
+  align-self: flex-start;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  pointer-events: all;
+  transition: border-color .3s, color .3s;
+}
+
+.canvas-btn.tokyo { border: 2px solid #cc2020; }
+
+.canvas-btn.tokyo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #cc2020;
+  transform: translateX(-105%) skewX(-8deg);
+  transition: transform .38s cubic-bezier(.4,0,.2,1);
+  z-index: -1;
+}
+
+.canvas-btn:hover { color: #fff; }
+.canvas-btn:hover::after { transform: translateX(0) skewX(-8deg); }
+
+.canvas-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 16;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.25em;
+  font-size: 14px;
+  color: #f0e6e6;
+  background: rgba(0,0,0,0.45);
+  padding: 8px 18px;
+  border-radius: 999px;
+  pointer-events: none;
+  transition: opacity .5s;
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px; left: 20px;
+  z-index: 100;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: #f0e6e6;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 10px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover { background: rgba(255,255,255,0.1); }
+.back-btn.tokyo:hover { background: rgba(204,32,32,0.2); border-color: #cc2020; }
+
+@media (max-width: 768px) {
+  .canvas-logo .main-title { font-size: 30px; }
+  .canvas-logo .sub-tag { font-size: 11px; letter-spacing: 0.3em; }
+  .canvas-left { left: 22px; bottom: 34px; width: 55%; }
+  .canvas-right { right: 22px; width: 50%; }
+  .canvas-title { font-size: 42px; }
+  .canvas-right .canvas-title { font-size: 34px; }
+  .canvas-desc { font-size: 15px; }
+  .canvas-btn { font-size: 14px; padding: 11px 18px; }
+}
+
+@media (max-width: 480px) {
+  .canvas-left, .canvas-right { width: 48%; }
+  .canvas-title { font-size: 28px; }
+  .canvas-right .canvas-title { font-size: 22px; }
+  .canvas-desc { font-size: 12px; }
+  .canvas-btn { font-size: 11px; padding: 8px 12px; }
+  .canvas-logo .main-title { font-size: 22px; }
+  .canvas-logo .sub-tag { font-size: 10px; }
+}
