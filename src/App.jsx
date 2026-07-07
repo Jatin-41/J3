@@ -9,10 +9,13 @@ import BakiHanma from './pages/BakiHanma.jsx'
 import Naruto from './pages/Naruto.jsx'
 import DemonSlayer from './pages/DemonSlayer.jsx'
 import AttackOnTitan from './pages/AttackOnTitan.jsx'
+import JujutsuKaisen from './pages/JujutsuKaisen.jsx'
+import DragonBall from './pages/DragonBall.jsx'
+import ClassroomElite from './pages/ClassroomElite.jsx'
 
 export default function App() {
   const location = useLocation()
-  const isDetailPage = ['/one-piece', '/baki-hanma', '/naruto', '/demon-slayer', '/attack-on-titan'].includes(location.pathname)
+  const isDetailPage = ['/one-piece', '/baki-hanma', '/naruto', '/demon-slayer', '/attack-on-titan', '/jujutsu-kaisen', '/dragon-ball', '/classroom-of-the-elite'].includes(location.pathname)
 
   return (
     <>
@@ -26,6 +29,9 @@ export default function App() {
           <Route path="/naruto" element={<Naruto />} />
           <Route path="/demon-slayer" element={<DemonSlayer />} />
           <Route path="/attack-on-titan" element={<AttackOnTitan />} />
+          <Route path="/jujutsu-kaisen" element={<JujutsuKaisen />} />
+          <Route path="/dragon-ball" element={<DragonBall />} />
+          <Route path="/classroom-of-the-elite" element={<ClassroomElite />} />
         </Routes>
       </AnimatePresence>
       {!isDetailPage && <Footer />}

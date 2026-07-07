@@ -9,6 +9,7 @@ import kokushiboImg from '../assets/kokushibo-demon-.png'
 import attackOnTitanImg from '../assets/attack-on-titan1.jpg'
 import jujutsuKaisenImg from '../assets/jujutsu-kaisen-.jpg'
 import gokuImg from '../assets/goku-vs-vegeta-.jpg'
+import classroomofEliteImg from '../assets/classroom-of-the-elite.jpg'
 
 export default function Home() {
   return (
@@ -64,7 +65,13 @@ export default function Home() {
             title="Goku & Vejeta"
             description="Rival Saiyans whose fierce competition pushes each other to become stronger and protect the universe."
             image={gokuImg}
-            path="/goku-vs-vejeta"
+            path="/dragon-ball"
+          />
+          <AnimeCard
+            title="Classroom of the Elite"
+            description="Ayanokoji Kiyotaka enters the prestigious Tokyo Advanced Nurturing High School, only to discover it's a brutal meritocracy where only the smartest survive and the weak are discarded."
+            image={classroomofEliteImg}
+            path="/classroom-of-the-elite"
           />
         </div>
       </main>
