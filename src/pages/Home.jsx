@@ -37,79 +37,91 @@ export default function Home() {
             image={monkeyDLuffy}
             path="/one-piece"
           />
-          <AnimeCard
-            title="Baki Hanma"
-            description="Witness the ultimate martial arts saga. Baki Hanma fights to surpass his father, the strongest creature on Earth."
-            image={bakiHanmaImg}
-            path="/baki-hanma"
-          />
-          <AnimeCard
-            title="Naruto Shippuden"
-            description="Follow Naruto Uzumaki's journey to become the strongest ninja in his village."
-            image={sasukeImg}
-            path="/naruto"
-          />
-          <AnimeCard
-            title="Demon Slayer"
-            description="Twin brothers whose bond was shattered by jealousy, leading one to become history's greatest swordsman and the other its strongest demon."
-            image={kokushiboImg}
-            path="/demon-slayer"
-          />
-           <AnimeCard
-            title="Attack on Titan"
-            description="Humanity fights for survival against terrifying giant humanoid creatures known as Titans."
-            image={attackOnTitanImg}
-            path="/attack-on-titan"
-          />
-           <AnimeCard
-            title="Jujutsu Kaisen"
-            description="A story of broken friendships, clashing ideals, and the battle between humanity and the King of Curses."
-            image={jujutsuKaisenImg}
-            path="/jujutsu-kaisen"
-          />
-          <AnimeCard
-            title="Goku & Vejeta"
-            description="Rival Saiyans whose fierce competition pushes each other to become stronger and protect the universe."
-            image={gokuImg}
-            path="/dragon-ball"
-          />
-          <AnimeCard
-            title="Classroom of the Elite"
-            description="Ayanokoji Kiyotaka enters the prestigious Tokyo Advanced Nurturing High School, only to discover it's a brutal meritocracy where only the smartest survive and the weak are discarded."
-            image={classroomofEliteImg}
-            path="/classroom-of-the-elite"
-          />
-          <AnimeCard
-            title="Tokyo Ghoul"
-            description="A college student's life changes forever when he becomes a ghoul."
-            image={TokyoGhoulImg}
-            path="/tokyo-ghoul"
-          />
-          <AnimeCard
-            title="Chainsaw Man"
-            description="A young man bonds with a Chainsaw Devil and fights to protect humanity from dangerous demons."
-            image={ChainsawManImg}
-            path="/chainsaw-man"
-          />
-          <AnimeCard
-            title="Tokyo Revengers"
-            description="A gang leader finds his life in danger when he becomes the target of a rival gang."
-            image={TokyoRevengersImg}
-            path="/tokyo-revengers"
-          />
+
           <AnimeCard
             title="Solo Leveling"
             description="Sung Jin-woo, the weakest hunter alive, discovers a system that allows him to level up and become the strongest."
             image={SoloLevelingImg}
             path="/solo-leveling"
           />
+
+          <AnimeCard
+            title="Demon Slayer"
+            description="Twin brothers whose bond was shattered by jealousy, leading one to become history's greatest swordsman and the other its strongest demon."
+            image={kokushiboImg}
+            path="/demon-slayer"
+          />
+
+          <AnimeCard
+            title="Jujutsu Kaisen"
+            description="A story of broken friendships, clashing ideals, and the battle between humanity and the King of Curses."
+            image={jujutsuKaisenImg}
+            path="/jujutsu-kaisen"
+          />
+
+          <AnimeCard
+            title="Attack on Titan"
+            description="Humanity fights for survival against terrifying giant humanoid creatures known as Titans."
+            image={attackOnTitanImg}
+            path="/attack-on-titan"
+          />
+
+          <AnimeCard
+            title="Naruto Shippuden"
+            description="Follow Naruto Uzumaki's journey to become the strongest ninja in his village."
+            image={sasukeImg}
+            path="/naruto"
+          />
+
+          <AnimeCard
+            title="Goku & Vegeta"
+            description="Rival Saiyans whose fierce competition pushes each other to become stronger and protect the universe."
+            image={gokuImg}
+            path="/dragon-ball"
+          />
+
+          <AnimeCard
+            title="Chainsaw Man"
+            description="A young man bonds with a Chainsaw Devil and fights to protect humanity from dangerous demons."
+            image={ChainsawManImg}
+            path="/chainsaw-man"
+          />
+
           <AnimeCard
             title="One-Punch Man"
             description="Saitama, a hero who can defeat any enemy with a single punch, struggles to find meaning in his strength."
             image={OnePunchManImg}
             path="/one-punch-man"
           />
-        </div>
+
+          <AnimeCard
+            title="Tokyo Ghoul"
+            description="A college student's life changes forever when he becomes a ghoul."
+            image={TokyoGhoulImg}
+            path="/tokyo-ghoul"
+          />
+
+          <AnimeCard
+            title="Classroom of the Elite"
+            description="Ayanokoji Kiyotaka enters the prestigious Tokyo Advanced Nurturing High School, only to discover it's a brutal meritocracy where only the smartest survive and the weak are discarded."
+            image={classroomofEliteImg}
+            path="/classroom-of-the-elite"
+          />
+
+          <AnimeCard
+            title="Tokyo Revengers"
+            description="A gang leader finds his life in danger when he becomes the target of a rival gang."
+            image={TokyoRevengersImg}
+            path="/tokyo-revengers"
+          />
+
+          <AnimeCard
+            title="Baki Hanma"
+            description="Witness the ultimate martial arts saga. Baki Hanma fights to surpass his father, the strongest creature on Earth."
+            image={bakiHanmaImg}
+            path="/baki-hanma"
+          />
+        </div>  
       </main>
     </>
   )
