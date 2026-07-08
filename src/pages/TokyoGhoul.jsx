@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './TokyoGhoul.css'
 import tokyoBg from '../assets/Kaneghoul.jpg'
-import tokyoReveal from '../assets/Toukaghoul.jpg' // Aap isko apni image se replace kar dena
+import tokyoReveal from '../assets/Toukaghoul.jpg'
 
 export default function TokyoGhoul() {
   const canvasRef = useRef(null)
@@ -104,7 +104,7 @@ export default function TokyoGhoul() {
       if (trail.length) {
         const head = trail[0]
         const glow = ctx.createRadialGradient(head.x, head.y, 0, head.x, head.y, HEAD_RADIUS * 1.45)
-        glow.addColorStop(0, 'rgba(200,50,50,0.28)') // Red glow for Tokyo Ghoul
+        glow.addColorStop(0, 'rgba(200,50,50,0.28)')
         glow.addColorStop(0.45, 'rgba(180,30,30,0.12)')
         glow.addColorStop(1, 'rgba(0,0,0,0)')
         ctx.beginPath(); ctx.arc(head.x, head.y, HEAD_RADIUS * 1.45, 0, Math.PI * 2)
@@ -139,38 +139,42 @@ export default function TokyoGhoul() {
 
         <div className="canvas-logo">
           <div className="main-title tokyo">Tokyo Ghoul</div>
-          <div className="sub-tag">RE &nbsp;·&nbsp; THE EYE OF THE KING</div>
+          <div className="sub-tag">ANTEIKU &nbsp;·&nbsp; THE RABBIT & THE ONE-EYED</div>
         </div>
 
         <div className="canvas-content">
+          {/* LEFT SIDE - KANEKI KEN */}
           <div className="canvas-left">
             <span className="canvas-eyebrow tokyo">Anteiku · 20th Ward</span>
             <h1 className="canvas-title tokyo">
               KANEKI<br />KEN
             </h1>
             <p className="canvas-desc">
-              A gentle college student whose life is shattered when he becomes 
-              a half-ghoul. Caught between two worlds, he must embrace the 
-              monster within to protect those he loves.
+              A gentle bookworm whose life is torn apart when he becomes 
+              a half-ghoul. Struggling between his human heart and ghoul 
+              instincts, he fights to protect Anteiku and the ones he loves 
+              — even if it means losing himself.
             </p>
             <button className="canvas-btn tokyo">Embrace the Ghoul</button>
           </div>
 
+          {/* RIGHT SIDE - TOUKA KIRISHIMA */}
           <div className="canvas-right">
-            <span className="canvas-eyebrow tokyo-right">The One-Eyed King</span>
+            <span className="canvas-eyebrow tokyo-right">The Rabbit</span>
             <h1 className="canvas-title tokyo tokyo-right">
-              RIZE<br />KAMISHIRO
+              TOUKA<br />KIRISHIMA
             </h1>
             <p className="canvas-desc">
-              The infamous "Binge Eater" whose encounter with Kaneki 
-              changes everything. Her influence lingers, shaping the fate 
-              of ghouls and humans alike.
+              A fierce ghoul who works at Anteiku, hiding her true nature 
+              behind a cold demeanor. Beneath her sharp exterior lies a 
+              girl who lost everything and will do anything to protect 
+              the family she's found.
             </p>
           </div>
         </div>
 
         <div className="canvas-hint" ref={hintRef}>
-          ▸ MOVE TO REVEAL THE TRUTH ◂
+          ▸ MOVE TO REVEAL THE RABBIT ◂
         </div>
       </div>
     </motion.div>

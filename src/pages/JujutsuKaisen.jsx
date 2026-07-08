@@ -139,37 +139,41 @@ export default function JujutsuKaisen() {
 
         <div className="canvas-logo">
           <div className="main-title jjk">Jujutsu Kaisen</div>
-          <div className="sub-tag">HOLLOW&nbsp;&nbsp;PURPLE &nbsp;·&nbsp; CURSED ENERGY</div>
+          <div className="sub-tag">HONORED &nbsp;·&nbsp; THE FALLEN &nbsp;·&nbsp; THE KING &nbsp;·&nbsp; THE VESSEL</div>
         </div>
 
         <div className="canvas-content">
+          {/* LEFT SIDE - GOJO & GETO */}
           <div className="canvas-left">
-            <span className="canvas-eyebrow jjk">Tokyo Jujutsu High</span>
+            <span className="canvas-eyebrow jjk">The Strongest & The Fallen</span>
             <h1 className="canvas-title jjk">
-              YUJI<br />ITADORI
+              GOJO<br />& GETO
             </h1>
             <p className="canvas-desc">
-              A boy who swallowed Sukuna's finger to save his friends. 
-              Now walking a path of death, bearing the King of Curses within — 
-              until his own execution.
+              Once the strongest duo in Jujutsu history. Gojo Satoru, 
+              blessed with the Six Eyes and Limitless. Suguru Geto, 
+              the man who fell from grace, believing in a world 
+              where only sorcerers exist.
             </p>
-            <button className="canvas-btn jjk">Divergent Fist</button>
+            <button className="canvas-btn jjk">Domain Expansion</button>
           </div>
 
+          {/* RIGHT SIDE - SUKUNA & YUJI */}
           <div className="canvas-right">
-            <span className="canvas-eyebrow jjk-right">The Honored One</span>
+            <span className="canvas-eyebrow jjk-right">The King & The Vessel</span>
             <h1 className="canvas-title jjk jjk-right">
-              GOJO<br />SATORU
+              SUKUNA<br />& YUJI
             </h1>
             <p className="canvas-desc">
-              The strongest sorcerer alive. Blessed with the Six Eyes and Limitless — 
-              a man so powerful, the world had to be reshaped just to contain him.
+              Ryomen Sukuna — the King of Curses, feared by all. 
+              Yuji Itadori — the boy who swallowed his finger to save others. 
+              Two souls in one body, destined for a brutal end.
             </p>
           </div>
         </div>
 
         <div className="canvas-hint" ref={hintRef}>
-          ▸ MOVE ACROSS TO UNLEASH HOLLOW PURPLE ◂
+          ▸ MOVE ACROSS TO UNLEASH THE CURSED ENERGY ◂
         </div>
       </div>
     </motion.div>

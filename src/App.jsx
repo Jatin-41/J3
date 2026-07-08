@@ -13,10 +13,14 @@ import JujutsuKaisen from './pages/JujutsuKaisen.jsx'
 import DragonBall from './pages/DragonBall.jsx'
 import ClassroomElite from './pages/ClassroomElite.jsx'
 import TokyoGhoul from './pages/TokyoGhoul.jsx'
+import ChainsawMan from './pages/ChainsawMan.jsx'
+import TokyoRevengers from './pages/TokyoRevengers.jsx'
+import SoloLeveling from './pages/SoloLeveling.jsx'
+import OnePunchMan from './pages/OnePunchMan.jsx'
 
 export default function App() {
   const location = useLocation()
-  const isDetailPage = ['/one-piece', '/baki-hanma', '/naruto', '/demon-slayer', '/attack-on-titan', '/jujutsu-kaisen', '/dragon-ball', '/classroom-of-the-elite', '/tokyo-ghoul'].includes(location.pathname)
+  const isDetailPage = ['/one-piece', '/baki-hanma', '/naruto', '/demon-slayer', '/attack-on-titan', '/jujutsu-kaisen', '/dragon-ball', '/classroom-of-the-elite', '/tokyo-ghoul', '/chainsaw-man', '/tokyo-revengers', '/solo-leveling', '/one-punch-man',].includes(location.pathname)
 
   return (
     <>
@@ -34,6 +38,10 @@ export default function App() {
           <Route path="/dragon-ball" element={<DragonBall />} />
           <Route path="/classroom-of-the-elite" element={<ClassroomElite />} />
           <Route path="/tokyo-ghoul" element={<TokyoGhoul />} /> 
+          <Route path="/chainsaw-man" element={<ChainsawMan />} />  
+          <Route path="/tokyo-revengers" element={<TokyoRevengers />} /> 
+          <Route path="/solo-leveling" element={<SoloLeveling />} />
+          <Route path="/one-punch-man" element={<OnePunchMan />} />
         </Routes>
       </AnimatePresence>
       {!isDetailPage && <Footer />}

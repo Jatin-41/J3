@@ -139,32 +139,36 @@ export default function ClassroomElite() {
 
         <div className="canvas-logo">
           <div className="main-title cote">Classroom of the Elite</div>
-          <div className="sub-tag">CLASS&nbsp;&nbsp;D &nbsp;·&nbsp; THE CHESS MASTER</div>
+          <div className="sub-tag">CLASS&nbsp;&nbsp;D &nbsp;·&nbsp; THE MASTERMIND</div>
         </div>
 
         <div className="canvas-content">
+          {/* LEFT SIDE - AYANOKOJI KIYOTAKA */}
           <div className="canvas-left">
             <span className="canvas-eyebrow cote">Tokyo Advanced Nurturing School</span>
             <h1 className="canvas-title cote">
               KIYOTAKA<br />AYANOKOJI
             </h1>
             <p className="canvas-desc">
-              A boy who hides his genius behind a mask of mediocrity. 
-              In a school where merit is everything, he quietly manipulates 
-              every outcome — always three moves ahead.
+              The enigma of Class D — a boy who appears average but 
+              possesses an intellect that rivals the school's greatest minds. 
+              He operates from the shadows, orchestrating events with 
+              surgical precision while hiding his true nature.
             </p>
             <button className="canvas-btn cote">Enter Class D</button>
           </div>
 
+          {/* RIGHT SIDE - ARISU SAKAYANAGI */}
           <div className="canvas-right">
-            <span className="canvas-eyebrow cote-right">The Unrivaled Mind</span>
+            <span className="canvas-eyebrow cote-right">The Chess Queen</span>
             <h1 className="canvas-title cote cote-right">
-              ICHINOSE<br />HONAMI
+              ARISU<br />SAKAYANAGI
             </h1>
             <p className="canvas-desc">
-              Class B's beloved leader. Her compassion and natural charisma 
-              build bridges where others burn them — but even kindness 
-              hides secrets in this school.
+              Class A's genius leader who plays the school like a chess board. 
+              Despite her frail body, her mind is razor-sharp. She sees through 
+              Ayanokoji's facade and considers him her greatest rival — 
+              and the only one worthy of her attention.
             </p>
           </div>
         </div>
