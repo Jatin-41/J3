@@ -3,7 +3,7 @@ import './HeroSection.css'
 
 export default function HeroSection() {
   return (
-    <header className="hero">
+    <header className="hero" style={{ backgroundImage: "url('https://4kwallpapers.com/images/walls/thumbs_3t/25406.jpg')" }}>
       <motion.div
         className="hero-content"
         initial={{ opacity: 0, y: 40 }}
