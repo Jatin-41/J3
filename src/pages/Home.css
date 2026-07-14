@@ -1,6 +1,336 @@
-/* Anime Grid */
-.anime-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+/* ============ Home About Section ============ */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.home-about-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, var(--bg-color) 0%, rgba(30, 41, 59, 0.3) 100%);
+}
+
+.home-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.home-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.home-heading {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #fff 0%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-description {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+
+.home-description strong {
+  color: #c4b5fd;
+  -webkit-text-fill-color: #c4b5fd;
+}
+
+.home-cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.85rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color), #f55);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.home-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 119, 119, 0.35);
+}
+
+.home-cta-btn.secondary {
+  background: transparent;
+  border: 2px solid rgba(139, 92, 246, 0.5);
+  color: #c4b5fd;
+}
+
+.home-cta-btn.secondary:hover {
+  background: rgba(139, 92, 246, 0.1);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.2);
+}
+
+/* Glow Cards */
+.home-about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.home-glow-card {
+  padding: 1.5rem 1.8rem;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.home-glow-card:hover {
+  transform: translateX(8px);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.glow-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-glow-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.home-glow-card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ============ Stats Section ============ */
+.home-stats-section {
+  padding: 4rem 0;
+}
+
+.home-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.home-stat-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.home-stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* ============ Featured Picks Section ============ */
+.home-featured-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, transparent, rgba(30, 41, 59, 0.2), transparent);
+}
+
+.home-featured-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.05rem;
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
+}
+
+.home-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.home-featured-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.home-featured-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.home-featured-card a {
+  display: block;
+}
+
+.featured-card-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.home-featured-card:hover .featured-card-img {
+  transform: scale(1.05);
+}
+
+.featured-card-info {
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-card-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.featured-card-arrow {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.home-featured-card:hover .featured-card-arrow {
+  transform: translateX(5px);
+}
+
+.home-featured-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ============ How It Works Section ============ */
+.home-how-section {
+  padding: 5rem 0 6rem;
+}
+
+.home-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.home-step-card {
+  padding: 2.5rem 2rem;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.home-step-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.step-number {
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.home-step-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.home-step-card p {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 992px) {
+  .home-about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .home-featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-heading {
+    font-size: 2rem;
+  }
+
+  .home-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-featured-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }

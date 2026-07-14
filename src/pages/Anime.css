@@ -1,0 +1,108 @@
+/* ============ Anime Page Hero Banner ============ */
+.anime-page-hero {
+  position: relative;
+  height: 45vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1a1040 40%, #2d1b69 70%, #0f172a 100%);
+  overflow: hidden;
+}
+
+.anime-page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(255, 119, 119, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.anime-page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, var(--bg-color), transparent);
+  pointer-events: none;
+}
+
+.anime-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 2rem;
+}
+
+.anime-hero-badge {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  background: rgba(255, 119, 119, 0.15);
+  border: 1px solid rgba(255, 119, 119, 0.3);
+  border-radius: 50px;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.2rem;
+}
+
+.anime-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, #c4b5fd 50%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.anime-hero-subtitle {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* ============ Anime Page Grid ============ */
+.anime-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
+.anime-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 768px) {
+  .anime-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .anime-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .anime-page-hero {
+    height: 35vh;
+    min-height: 250px;
+  }
+
+  .anime-page-container {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .anime-page-grid {
+    grid-template-columns: 1fr;
+  }
+}

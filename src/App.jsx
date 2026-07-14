@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import Anime from './pages/Anime.jsx'
 import OnePiece from './pages/OnePiece.jsx'
 import BakiHanma from './pages/BakiHanma.jsx'
 import Naruto from './pages/Naruto.jsx'
@@ -30,6 +31,7 @@ export default function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/anime" element={<Anime />} />
           <Route path="/one-piece" element={<OnePiece />} />
           <Route path="/baki-hanma" element={<BakiHanma />} />
           <Route path="/naruto" element={<Naruto />} />

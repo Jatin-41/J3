@@ -12,6 +12,9 @@ export default function Navbar() {
           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
         </li>
         <li>
+          <Link to="/anime" className={location.pathname === '/anime' ? 'active' : ''}>Anime</Link>
+        </li>
+        <li>
           <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
         </li>
       </ul>

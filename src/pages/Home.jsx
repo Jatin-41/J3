@@ -1,127 +1,207 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import './Home.css'
 import HeroSection from '../components/HeroSection.jsx'
-import AnimeCard from '../components/AnimeCard.jsx'
-const monkeyDLuffy = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018897/pirate-monkey_vbeprr.jpg'
-const bakiHanmaImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018690/baki-hanma-anime-series-3840x2160-14925_utptuh.jpg'
-const sasukeImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019055/sasuke-uchiha2_nzmixk.png'
-const kokushiboImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018900/kokushibo-demon-_qdhr9v.png'
-const attackOnTitanImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018712/attack-on-titan_dvmcgh.jpg'
-const jujutsuKaisenImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018898/jujutsu-kaisen_fujthd.jpg'
-const classroomofEliteImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018693/classroom-of-the-elite_txlyxf.jpg'
-const TokyoGhoulImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018897/Kaneghoul_pf6ahq.jpg'
-const ChainsawManImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018709/chainsaw-man-denj-_ocumqa.jpg'
-const TokyoRevengersImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018888/izana-kurokawa_fwyr1k.jpg'
-const SoloLevelingImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019211/sung-jinwoo-purple_ppescj.jpg'
-const OnePunchManImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019056/saitama-one-punch-man_lubkya.jpg'
-const DeathNoteImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018713/death-note-light_er1emq.jpg'
+
+const featuredAnime = [
+  {
+    title: 'One Piece',
+    image: 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018897/pirate-monkey_vbeprr.jpg',
+    path: '/one-piece'
+  },
+  {
+    title: 'Solo Leveling',
+    image: 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019211/sung-jinwoo-purple_ppescj.jpg',
+    path: '/solo-leveling'
+  },
+  {
+    title: 'Attack on Titan',
+    image: 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018712/attack-on-titan_dvmcgh.jpg',
+    path: '/attack-on-titan'
+  },
+  {
+    title: 'Jujutsu Kaisen',
+    image: 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018898/jujutsu-kaisen_fujthd.jpg',
+    path: '/jujutsu-kaisen'
+  }
+]
+
+const stats = [
+  { number: '14+', label: 'Anime Series' },
+  { number: '50+', label: 'Characters' },
+  { number: '∞', label: 'Epic Moments' },
+  { number: '24/7', label: 'Anime Vibes' }
+]
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <main id="anime-list" className="container">
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Trending Anime
-        </motion.h2>
-        <div className="anime-grid">
-          <AnimeCard
-            title="One Piece"
-            description="Join Monkey D. Luffy on his quest to find the legendary treasure and become the Pirate King."
-            image={monkeyDLuffy}
-            path="/one-piece"
-          />
 
-          <AnimeCard
-            title="Solo Leveling"
-            description="Sung Jin-woo, the weakest hunter alive, discovers a system that allows him to level up and become the strongest."
-            image={SoloLevelingImg}
-            path="/solo-leveling"
-          />
+      {/* What is AnimeVerse Section */}
+      <section className="home-about-section">
+        <div className="home-container">
+          <motion.div
+            className="home-about-grid"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="home-about-text">
+              <span className="home-eyebrow">Welcome to AnimeVerse</span>
+              <h2 className="home-heading">Your Ultimate Anime Destination</h2>
+              <p className="home-description">
+                AnimeVerse is a community-driven platform where you can explore, discover,
+                and dive deep into the world of anime. From legendary shonen epics to
+                mind-bending psychological thrillers — we've got it all covered with
+                stunning visuals and interactive experiences.
+              </p>
+              <p className="home-description">
+                Each anime page features a unique <strong>canvas mouse-reveal animation</strong> that
+                lets you uncover hidden characters and scenes as you move your cursor.
+                It's anime exploration like you've never experienced before.
+              </p>
+              <Link to="/anime" className="home-cta-btn">
+                Browse All Anime →
+              </Link>
+            </div>
+            <div className="home-about-visual">
+              <div className="home-glow-card">
+                <div className="glow-icon">⚡</div>
+                <h3>Interactive Experience</h3>
+                <p>Mouse-reveal canvas animations on every anime detail page</p>
+              </div>
+              <div className="home-glow-card">
+                <div className="glow-icon">🎨</div>
+                <h3>Stunning Visuals</h3>
+                <p>High-quality artwork and custom themes for each anime</p>
+              </div>
+              <div className="home-glow-card">
+                <div className="glow-icon">🌏</div>
+                <h3>Growing Collection</h3>
+                <p>New anime and features added regularly to keep you hooked</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-          <AnimeCard
-            title="Demon Slayer"
-            description="Twin brothers whose bond was shattered by jealousy, leading one to become history's greatest swordsman and the other its strongest demon."
-            image={kokushiboImg}
-            path="/demon-slayer"
-          />
+      {/* Stats Section */}
+      <section className="home-stats-section">
+        <div className="home-container">
+          <div className="home-stats-grid">
+            {stats.map((stat, i) => (
+              <motion.div
+                className="home-stat-card"
+                key={i}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <span className="stat-number">{stat.number}</span>
+                <span className="stat-label">{stat.label}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <AnimeCard
-            title="Jujutsu Kaisen"
-            description="A story of broken friendships, clashing ideals, and the battle between humanity and the King of Curses."
-            image={jujutsuKaisenImg}
-            path="/jujutsu-kaisen"
-          />
+      {/* Featured Picks Section */}
+      <section className="home-featured-section">
+        <div className="home-container">
+          <motion.h2
+            className="section-title"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Featured Picks
+          </motion.h2>
+          <p className="home-featured-subtitle">Hand-picked anime to get you started</p>
+          <div className="home-featured-grid">
+            {featuredAnime.map((anime, i) => (
+              <motion.div
+                className="home-featured-card"
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                whileHover={{ y: -8 }}
+              >
+                <Link to={anime.path}>
+                  <div
+                    className="featured-card-img"
+                    style={{ backgroundImage: `url(${anime.image})` }}
+                  />
+                  <div className="featured-card-info">
+                    <h3>{anime.title}</h3>
+                    <span className="featured-card-arrow">→</span>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+          <div className="home-featured-cta">
+            <Link to="/anime" className="home-cta-btn secondary">
+              View All Anime →
+            </Link>
+          </div>
+        </div>
+      </section>
 
-          <AnimeCard
-            title="Attack on Titan"
-            description="Humanity fights for survival against terrifying giant humanoid creatures known as Titans."
-            image={attackOnTitanImg}
-            path="/attack-on-titan"
-          />
-
-          <AnimeCard
-            title="Naruto Shippuden"
-            description="Follow Naruto Uzumaki's journey to become the strongest ninja in his village."
-            image={sasukeImg}
-            path="/naruto"
-          />
-
-          <AnimeCard
-            title="Chainsaw Man"
-            description="A young man bonds with a Chainsaw Devil and fights to protect humanity from dangerous demons."
-            image={ChainsawManImg}
-            path="/chainsaw-man"
-          />
-
-          <AnimeCard
-            title="One-Punch Man"
-            description="Saitama, a hero who can defeat any enemy with a single punch, struggles to find meaning in his strength."
-            image={OnePunchManImg}
-            path="/one-punch-man"
-          />
-
-          <AnimeCard
-            title="Tokyo Ghoul"
-            description="A college student's life changes forever when he becomes a ghoul."
-            image={TokyoGhoulImg}
-            path="/tokyo-ghoul"
-          />
-
-          <AnimeCard
-            title="Classroom of the Elite"
-            description="Ayanokoji Kiyotaka enters the prestigious Tokyo Advanced Nurturing High School, only to discover it's a brutal meritocracy where only the smartest survive and the weak are discarded."
-            image={classroomofEliteImg}
-            path="/classroom-of-the-elite"
-          />
-
-          <AnimeCard
-            title="Tokyo Revengers"
-            description="A gang leader finds his life in danger when he becomes the target of a rival gang."
-            image={TokyoRevengersImg}
-            path="/tokyo-revengers"
-          />
-
-          <AnimeCard
-            title="Baki Hanma"
-            description="Witness the ultimate martial arts saga. Baki Hanma fights to surpass his father, the strongest creature on Earth."
-            image={bakiHanmaImg}
-            path="/baki-hanma"
-          />
-
-          <AnimeCard
-            title="Death Note"
-            description="A high school genius stumbles upon a supernatural notebook that allows him to kill anyone by writing their name in it."
-            image={DeathNoteImg}
-            path="/death-note"
-          />
-        </div>  
-      </main>
+      {/* How It Works Section */}
+      <section className="home-how-section">
+        <div className="home-container">
+          <motion.h2
+            className="section-title"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            How It Works
+          </motion.h2>
+          <div className="home-steps-grid">
+            <motion.div
+              className="home-step-card"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="step-number">01</div>
+              <h3>Pick Your Anime</h3>
+              <p>Browse our collection and choose any anime that catches your eye.</p>
+            </motion.div>
+            <motion.div
+              className="home-step-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+            >
+              <div className="step-number">02</div>
+              <h3>Explore the Details</h3>
+              <p>Dive into each anime's custom page with unique themes and content.</p>
+            </motion.div>
+            <motion.div
+              className="home-step-card"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className="step-number">03</div>
+              <h3>Reveal Hidden Art</h3>
+              <p>Move your mouse across the canvas to reveal hidden characters and scenes.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
