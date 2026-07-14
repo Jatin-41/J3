@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './ClassroomElite.css'
-import coteBg from '../assets/classroom-of-the-elite.jpg'
-import coteReveal from '../assets/Ayanokoji.jpg'
+const coteBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018693/classroom-of-the-elite_txlyxf.jpg'
+const coteReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018683/Ayanokoji_xgutax.jpg'
 
 export default function ClassroomElite() {
   const canvasRef = useRef(null)

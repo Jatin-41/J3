@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './OnePunchMan.css'
-import opmBg from '../assets/saitama-one-punch-man.jpg'
-import opmReveal from '../assets/sitama-team.png' 
+const opmBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019056/saitama-one-punch-man_lubkya.jpg';
+const opmReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019034/sitama-team_gq7vpt.png'; 
 
 export default function OnePunchMan() {
   const canvasRef = useRef(null)

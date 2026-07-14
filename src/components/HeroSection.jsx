@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
 import './HeroSection.css'
+import japan from '../assets/japan.jpg'
 
 export default function HeroSection() {
   return (
-    <header className="hero" style={{ backgroundImage: "url('https://4kwallpapers.com/images/walls/thumbs_3t/25406.jpg')" }}>
+    <header className="hero" style={{ backgroundImage: `url(${japan})` }}>
       <motion.div
         className="hero-content"
         initial={{ opacity: 0, y: 40 }}

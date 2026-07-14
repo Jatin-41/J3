@@ -2,9 +2,9 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './ChainsawMan.css'
-import chainsawBg from '../assets/chainsaw-man-denj-.jpg'
+const chainsawBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018709/chainsaw-man-denj-_ocumqa.jpg';
 // Reveal image ke liye same image use kar rahe hain
-import chainsawReveal from '../assets/chainsaw-man-the.jpg'
+const chainsawReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018726/chainsaw-man-the_agqhnk.jpg';
 
 export default function ChainsawMan() {
     const canvasRef = useRef(null)

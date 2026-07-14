@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './AttackOnTitan.css'
-import aotBg from '../assets/attack-on-titan.jpg'
-import aotReveal from '../assets/attack-on-titan1.jpg'
+const aotBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018712/attack-on-titan_dvmcgh.jpg';
+const aotReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018691/attack-on-titan1_lqdfj3.jpg';
 
 export default function AttackOnTitan() {
   const canvasRef = useRef(null)

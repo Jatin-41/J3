@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './DemonSlayer.css'
-import kokushibo from '../assets/kokushibo-demon-.png'
-import yoriichi from '../assets/yoriichi-tsugikuni-.jpg'
+const kokushibo = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018900/kokushibo-demon-_qdhr9v.png';
+const yoriichi = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019254/yoriichi-tsugikuni-_oh9tvk.jpg';
 
 export default function DemonSlayer() {
   const canvasRef = useRef(null)

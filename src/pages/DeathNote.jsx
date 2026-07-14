@@ -1,11 +1,11 @@
 import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import './TokyoGhoul.css'
-const tokyoBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018897/Kaneghoul_pf6ahq.jpg';
-const tokyoReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019248/Toukaghoul_klonpi.jpg';
+import './DeathNote.css'
+const deathNoteBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018713/death-note-light_er1emq.jpg';
+const deathNoteReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018887/l-lawliet-death_tfeexl.png'; // Agar alag image hai toh, nahi toh same use karo
 
-export default function TokyoGhoul() {
+export default function DeathNote() {
   const canvasRef = useRef(null)
   const heroRef = useRef(null)
   const hintRef = useRef(null)
@@ -30,8 +30,8 @@ export default function TokyoGhoul() {
 
     const bottom = new Image()
     const top = new Image()
-    bottom.src = tokyoBg
-    top.src = tokyoReveal
+    bottom.src = deathNoteBg
+    top.src = deathNoteReveal
 
     const off = document.createElement('canvas')
     const offc = off.getContext('2d')
@@ -104,8 +104,8 @@ export default function TokyoGhoul() {
       if (trail.length) {
         const head = trail[0]
         const glow = ctx.createRadialGradient(head.x, head.y, 0, head.x, head.y, HEAD_RADIUS * 1.45)
-        glow.addColorStop(0, 'rgba(200,50,50,0.28)')
-        glow.addColorStop(0.45, 'rgba(180,30,30,0.12)')
+        glow.addColorStop(0, 'rgba(255,0,0,0.30)') // Red glow - Death Note theme
+        glow.addColorStop(0.45, 'rgba(150,0,0,0.12)')
         glow.addColorStop(1, 'rgba(0,0,0,0)')
         ctx.beginPath(); ctx.arc(head.x, head.y, HEAD_RADIUS * 1.45, 0, Math.PI * 2)
         ctx.fillStyle = glow; ctx.fill()
@@ -132,49 +132,49 @@ export default function TokyoGhoul() {
       initial={{ opacity: 0 }} animate={{ opacity: 1 }}
       exit={{ opacity: 0 }} transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn tokyo">← Back</Link>
+      <Link to="/" className="back-btn death-note">← Back</Link>
 
-      <div className="canvas-hero tokyo" ref={heroRef}>
+      <div className="canvas-hero death-note" ref={heroRef}>
         <canvas className="canvas-element" ref={canvasRef} />
 
         <div className="canvas-logo">
-          <div className="main-title tokyo">Tokyo Ghoul</div>
-          <div className="sub-tag">ANTEIKU &nbsp;·&nbsp; THE RABBIT & THE ONE-EYED</div>
+          <div className="main-title death-note">Death Note</div>
+          <div className="sub-tag">THE&nbsp;&nbsp;NOTEBOOK &nbsp;·&nbsp; THE GOD</div>
         </div>
 
         <div className="canvas-content">
-          {/* LEFT SIDE - KANEKI KEN */}
+          {/* LEFT SIDE - LIGHT YAGAMI */}
           <div className="canvas-left">
-            <span className="canvas-eyebrow tokyo">Anteiku · 20th Ward</span>
-            <h1 className="canvas-title tokyo">
-              KANEKI<br />KEN
+            <span className="canvas-eyebrow death-note">The God of the New World</span>
+            <h1 className="canvas-title death-note">
+              LIGHT<br />YAGAMI
             </h1>
             <p className="canvas-desc">
-              A gentle bookworm whose life is torn apart when he becomes 
-              a half-ghoul. Struggling between his human heart and ghoul 
-              instincts, he fights to protect Anteiku and the ones he loves 
-              — even if it means losing himself.
+              A brilliant student who stumbles upon a supernatural 
+              notebook that can kill anyone whose name is written in it. 
+              He takes it upon himself to cleanse the world of criminals, 
+              becoming a god-like figure known as "Kira."
             </p>
-            <button className="canvas-btn tokyo">Embrace the Ghoul</button>
+            <button className="canvas-btn death-note">Write the Name</button>
           </div>
 
-          {/* RIGHT SIDE - TOUKA KIRISHIMA */}
+          {/* RIGHT SIDE - L */}
           <div className="canvas-right">
-            <span className="canvas-eyebrow tokyo-right">The Rabbit</span>
-            <h1 className="canvas-title tokyo tokyo-right">
-              TOUKA<br />KIRISHIMA
+            <span className="canvas-eyebrow death-note-right">The World's Greatest Detective</span>
+            <h1 className="canvas-title death-note death-note-right">
+              L<br />LAWLIET
             </h1>
             <p className="canvas-desc">
-              A fierce ghoul who works at Anteiku, hiding her true nature 
-              behind a cold demeanor. Beneath her sharp exterior lies a 
-              girl who lost everything and will do anything to protect 
-              the family she's found.
+              The enigmatic detective who stands as humanity's only hope. 
+              With his unmatched intellect and unorthodox methods, 
+              he vows to catch Kira — even if it means putting his 
+              own life on the line in this deadly game of wits.
             </p>
           </div>
         </div>
 
         <div className="canvas-hint" ref={hintRef}>
-          ▸ MOVE TO REVEAL THE RABBIT ◂
+          ▸ MOVE ACROSS TO REVEAL THE TRUTH ◂
         </div>
       </div>
     </motion.div>

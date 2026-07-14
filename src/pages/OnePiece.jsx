@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './OnePiece.css'
 // Import your images from assets
-import pirateMonkey from '../assets/pirate-monkey.jpg'
-import monkeyDLuffy from '../assets/monkey-d-luffy.jpg'
+const pirateMonkey = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018897/pirate-monkey_vbeprr.jpg';
+const monkeyDLuffy = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018918/monkey-d-luffy_lpo58a.jpg';
 
 export default function OnePiece() {
   const canvasRef = useRef(null)

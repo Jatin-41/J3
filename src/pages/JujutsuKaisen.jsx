@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './JujutsuKaisen.css'
-import jjkBg from '../assets/jujutsu-kaisen-.jpg'
-import jjkReveal from '../assets/jujutsu-kaisen.jpeg'
+const jjkBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018999/jujutsu-kaisen-_pq7rzd.jpg';
+const jjkReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018898/jujutsu-kaisen_fujthd.jpg';
 
 export default function JujutsuKaisen() {
   const canvasRef = useRef(null)

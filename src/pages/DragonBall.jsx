@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './DragonBall.css'
-import dbBg from '../assets/goku-vs-vegeta-.jpg'
-import dbReveal from '../assets/son-goku-vegeta.png'
+const dbBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018714/goku-vs-vegeta-_wnmuvk.jpg';
+const dbReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019255/son-goku-vegeta_eemiey.png';
 
 export default function DragonBall() {
   const canvasRef = useRef(null)

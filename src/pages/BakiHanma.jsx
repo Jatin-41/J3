@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './BakiHanma.css'
-import bakiSeries from '../assets/baki-hanma-anime-series-3840x2160-14925.jpg'
-import bakiThe from '../assets/baki-hanma-baki-the-3840x2160-25563.jpg'
+const bakiSeries = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018690/baki-hanma-anime-series-3840x2160-14925_utptuh.jpg';
+const bakiThe = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018688/baki-hanma-baki-the-3840x2160-25563_azhxif.jpg';
 
 export default function BakiHanma() {
   const canvasRef = useRef(null)

@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './TokyoRevengers.css'
-import tokyoRevBg from '../assets/izana-kurokawa.jpg'
-import tokyoRevReveal from '../assets/tokyo-revengers.jpg' 
+const tokyoRevBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018888/izana-kurokawa_fwyr1k.jpg';
+const tokyoRevReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019256/tokyo-revengers_snenxv.jpg'; 
 
 export default function TokyoRevengers() {
   const canvasRef = useRef(null)

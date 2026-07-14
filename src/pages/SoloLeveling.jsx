@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './SoloLeveling.css'
-import soloBg from '../assets/sung-jinwoo-purple.jpg'
-import soloReveal from '../assets/Cha Hae-in.png'
+const soloBg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019211/sung-jinwoo-purple_ppescj.jpg';
+const soloReveal = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018713/Cha_Hae-in_klknop.png'
 
 export default function SoloLeveling() {
   const canvasRef = useRef(null)

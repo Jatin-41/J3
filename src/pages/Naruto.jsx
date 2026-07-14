@@ -2,8 +2,8 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import './Naruto.css'
-import sasuke1 from '../assets/sasuke-uchiha.png'
-import sasuke2 from '../assets/sasuke-uchiha2.png'
+const sasuke1 = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018955/sasuke-uchiha_qkhkiz.png';
+const sasuke2 = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019055/sasuke-uchiha2_nzmixk.png';
 
 export default function Naruto() {
   const canvasRef = useRef(null)

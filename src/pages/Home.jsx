@@ -2,20 +2,19 @@ import { motion } from 'framer-motion'
 import './Home.css'
 import HeroSection from '../components/HeroSection.jsx'
 import AnimeCard from '../components/AnimeCard.jsx'
-import monkeyDLuffy from '../assets/pirate-monkey.jpg'
-import bakiHanmaImg from '../assets/baki-hanma-anime-series-3840x2160-14925.jpg'
-import sasukeImg from '../assets/sasuke-uchiha.png'
-import kokushiboImg from '../assets/kokushibo-demon-.png'
-import attackOnTitanImg from '../assets/attack-on-titan.jpg'
-import jujutsuKaisenImg from '../assets/jujutsu-kaisen-.jpg'
-import gokuImg from '../assets/goku-vs-vegeta-.jpg'
-import classroomofEliteImg from '../assets/classroom-of-the-elite.jpg'
-import TokyoGhoulImg from '../assets/Kaneghoul.jpg'
-import ChainsawManImg from '../assets/chainsaw-man-denj-.jpg'
-import TokyoRevengersImg from '../assets/izana-kurokawa.jpg'
-import SoloLevelingImg from '../assets/sung-jinwoo-purple.jpg'
-import OnePunchManImg from '../assets/saitama-one-punch-man.jpg'
-
+const monkeyDLuffy = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018897/pirate-monkey_vbeprr.jpg'
+const bakiHanmaImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018690/baki-hanma-anime-series-3840x2160-14925_utptuh.jpg'
+const sasukeImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019055/sasuke-uchiha2_nzmixk.png'
+const kokushiboImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018900/kokushibo-demon-_qdhr9v.png'
+const attackOnTitanImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018712/attack-on-titan_dvmcgh.jpg'
+const jujutsuKaisenImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018898/jujutsu-kaisen_fujthd.jpg'
+const classroomofEliteImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018693/classroom-of-the-elite_txlyxf.jpg'
+const TokyoGhoulImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018897/Kaneghoul_pf6ahq.jpg'
+const ChainsawManImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018709/chainsaw-man-denj-_ocumqa.jpg'
+const TokyoRevengersImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018888/izana-kurokawa_fwyr1k.jpg'
+const SoloLevelingImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019211/sung-jinwoo-purple_ppescj.jpg'
+const OnePunchManImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019056/saitama-one-punch-man_lubkya.jpg'
+const DeathNoteImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018713/death-note-light_er1emq.jpg'
 
 export default function Home() {
   return (
@@ -74,13 +73,6 @@ export default function Home() {
           />
 
           <AnimeCard
-            title="Goku & Vegeta"
-            description="Rival Saiyans whose fierce competition pushes each other to become stronger and protect the universe."
-            image={gokuImg}
-            path="/dragon-ball"
-          />
-
-          <AnimeCard
             title="Chainsaw Man"
             description="A young man bonds with a Chainsaw Devil and fights to protect humanity from dangerous demons."
             image={ChainsawManImg}
@@ -120,6 +112,13 @@ export default function Home() {
             description="Witness the ultimate martial arts saga. Baki Hanma fights to surpass his father, the strongest creature on Earth."
             image={bakiHanmaImg}
             path="/baki-hanma"
+          />
+
+          <AnimeCard
+            title="Death Note"
+            description="A high school genius stumbles upon a supernatural notebook that allows him to kill anyone by writing their name in it."
+            image={DeathNoteImg}
+            path="/death-note"
           />
         </div>  
       </main>
