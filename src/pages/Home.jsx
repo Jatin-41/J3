@@ -45,7 +45,7 @@ export default function Home() {
             className="home-about-grid"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7 }}
           >
             <div className="home-about-text">
@@ -62,26 +62,49 @@ export default function Home() {
                 lets you uncover hidden characters and scenes as you move your cursor.
                 It's anime exploration like you've never experienced before.
               </p>
-              <Link to="/anime" className="home-cta-btn">
-                Browse All Anime →
-              </Link>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} style={{ display: 'inline-block' }}>
+                <Link to="/anime" className="home-cta-btn">
+                  Browse All Anime →
+                </Link>
+              </motion.div>
             </div>
             <div className="home-about-visual">
-              <div className="home-glow-card">
+              <motion.div
+                className="home-glow-card"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
                 <div className="glow-icon">⚡</div>
                 <h3>Interactive Experience</h3>
                 <p>Mouse-reveal canvas animations on every anime detail page</p>
-              </div>
-              <div className="home-glow-card">
+              </motion.div>
+              <motion.div
+                className="home-glow-card"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
                 <div className="glow-icon">🎨</div>
                 <h3>Stunning Visuals</h3>
                 <p>High-quality artwork and custom themes for each anime</p>
-              </div>
-              <div className="home-glow-card">
+              </motion.div>
+              <motion.div
+                className="home-glow-card"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
                 <div className="glow-icon">🌏</div>
                 <h3>Growing Collection</h3>
                 <p>New anime and features added regularly to keep you hooked</p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -97,8 +120,9 @@ export default function Home() {
                 key={i}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
+                whileHover={{ scale: 1.1, translateY: -5 }}
               >
                 <span className="stat-number">{stat.number}</span>
                 <span className="stat-label">{stat.label}</span>
@@ -115,12 +139,20 @@ export default function Home() {
             className="section-title"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
             Featured Picks
           </motion.h2>
-          <p className="home-featured-subtitle">Hand-picked anime to get you started</p>
+          <motion.p
+            className="home-featured-subtitle"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Hand-picked anime to get you started
+          </motion.p>
           <div className="home-featured-grid">
             {featuredAnime.map((anime, i) => (
               <motion.div
@@ -128,7 +160,7 @@ export default function Home() {
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 whileHover={{ y: -8 }}
               >
@@ -145,11 +177,19 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          <div className="home-featured-cta">
-            <Link to="/anime" className="home-cta-btn secondary">
-              View All Anime →
-            </Link>
-          </div>
+          <motion.div
+            className="home-featured-cta"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} style={{ display: 'inline-block' }}>
+              <Link to="/anime" className="home-cta-btn secondary">
+                View All Anime →
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -160,7 +200,7 @@ export default function Home() {
             className="section-title"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6 }}
           >
             How It Works
@@ -170,8 +210,9 @@ export default function Home() {
               className="home-step-card"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.5 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
               <div className="step-number">01</div>
               <h3>Pick Your Anime</h3>
@@ -181,8 +222,9 @@ export default function Home() {
               className="home-step-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.5, delay: 0.15 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
               <div className="step-number">02</div>
               <h3>Explore the Details</h3>
@@ -192,8 +234,9 @@ export default function Home() {
               className="home-step-card"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
               <div className="step-number">03</div>
               <h3>Reveal Hidden Art</h3>
