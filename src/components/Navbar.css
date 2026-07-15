@@ -15,10 +15,25 @@
 .logo {
     font-size: 1.8rem;
     font-weight: 800;
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(
+        to right, 
+        #8b5cf6, 
+        #3b82f6, 
+        #ec4899, 
+        #eab308, 
+        #8b5cf6
+    );
+    background-size: 300% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientFlow 4s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% center; }
+    100% { background-position: 300% center; }
 }
 
 .nav-links {

@@ -1,24 +1,25 @@
+import React, { Suspense } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
-import Anime from './pages/Anime.jsx'
-import OnePiece from './pages/OnePiece.jsx'
-import BakiHanma from './pages/BakiHanma.jsx'
-import Naruto from './pages/Naruto.jsx'
-import DemonSlayer from './pages/DemonSlayer.jsx'
-import AttackOnTitan from './pages/AttackOnTitan.jsx'
-import JujutsuKaisen from './pages/JujutsuKaisen.jsx'
-import DragonBall from './pages/DragonBall.jsx'
-import ClassroomElite from './pages/ClassroomElite.jsx'
-import TokyoGhoul from './pages/TokyoGhoul.jsx'
-import ChainsawMan from './pages/ChainsawMan.jsx'
-import TokyoRevengers from './pages/TokyoRevengers.jsx'
-import SoloLeveling from './pages/SoloLeveling.jsx'
-import OnePunchMan from './pages/OnePunchMan.jsx'
-import DeathNote from './pages/DeathNote.jsx'
+const Home = React.lazy(() => import('./pages/Home.jsx'))
+const About = React.lazy(() => import('./pages/About.jsx'))
+const Anime = React.lazy(() => import('./pages/Anime.jsx'))
+const OnePiece = React.lazy(() => import('./pages/OnePiece.jsx'))
+const BakiHanma = React.lazy(() => import('./pages/BakiHanma.jsx'))
+const Naruto = React.lazy(() => import('./pages/Naruto.jsx'))
+const DemonSlayer = React.lazy(() => import('./pages/DemonSlayer.jsx'))
+const AttackOnTitan = React.lazy(() => import('./pages/AttackOnTitan.jsx'))
+const JujutsuKaisen = React.lazy(() => import('./pages/JujutsuKaisen.jsx'))
+const DragonBall = React.lazy(() => import('./pages/DragonBall.jsx'))
+const ClassroomElite = React.lazy(() => import('./pages/ClassroomElite.jsx'))
+const TokyoGhoul = React.lazy(() => import('./pages/TokyoGhoul.jsx'))
+const ChainsawMan = React.lazy(() => import('./pages/ChainsawMan.jsx'))
+const TokyoRevengers = React.lazy(() => import('./pages/TokyoRevengers.jsx'))
+const SoloLeveling = React.lazy(() => import('./pages/SoloLeveling.jsx'))
+const OnePunchMan = React.lazy(() => import('./pages/OnePunchMan.jsx'))
+const DeathNote = React.lazy(() => import('./pages/DeathNote.jsx'))
 
 export default function App() {
   const location = useLocation()
@@ -28,25 +29,27 @@ export default function App() {
     <>
       {!isDetailPage && <Navbar />}
       <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/anime" element={<Anime />} />
-          <Route path="/one-piece" element={<OnePiece />} />
-          <Route path="/baki-hanma" element={<BakiHanma />} />
-          <Route path="/naruto" element={<Naruto />} />
-          <Route path="/demon-slayer" element={<DemonSlayer />} />
-          <Route path="/attack-on-titan" element={<AttackOnTitan />} />
-          <Route path="/jujutsu-kaisen" element={<JujutsuKaisen />} />
-          <Route path="/dragon-ball" element={<DragonBall />} />
-          <Route path="/classroom-of-the-elite" element={<ClassroomElite />} />
-          <Route path="/tokyo-ghoul" element={<TokyoGhoul />} /> 
-          <Route path="/chainsaw-man" element={<ChainsawMan />} />  
-          <Route path="/tokyo-revengers" element={<TokyoRevengers />} /> 
-          <Route path="/solo-leveling" element={<SoloLeveling />} />
-          <Route path="/one-punch-man" element={<OnePunchMan />} />
-          <Route path="/death-note" element={<DeathNote />} />  
-        </Routes>
+        <Suspense fallback={<div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white', fontSize: '1.5rem', fontWeight: 'bold' }}>Loading Anime...</div>}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/anime" element={<Anime />} />
+            <Route path="/one-piece" element={<OnePiece />} />
+            <Route path="/baki-hanma" element={<BakiHanma />} />
+            <Route path="/naruto" element={<Naruto />} />
+            <Route path="/demon-slayer" element={<DemonSlayer />} />
+            <Route path="/attack-on-titan" element={<AttackOnTitan />} />
+            <Route path="/jujutsu-kaisen" element={<JujutsuKaisen />} />
+            <Route path="/dragon-ball" element={<DragonBall />} />
+            <Route path="/classroom-of-the-elite" element={<ClassroomElite />} />
+            <Route path="/tokyo-ghoul" element={<TokyoGhoul />} /> 
+            <Route path="/chainsaw-man" element={<ChainsawMan />} />  
+            <Route path="/tokyo-revengers" element={<TokyoRevengers />} /> 
+            <Route path="/solo-leveling" element={<SoloLeveling />} />
+            <Route path="/one-punch-man" element={<OnePunchMan />} />
+            <Route path="/death-note" element={<DeathNote />} />  
+          </Routes>
+        </Suspense>
       </AnimatePresence>
       {!isDetailPage && <Footer />}
     </>

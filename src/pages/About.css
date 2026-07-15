@@ -1,22 +1,272 @@
-/* About Section */
-.about-section {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+.about-page {
+  width: 100%;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-.about-section p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    color: #cbd5e1;
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
 }
 
-.about-image {
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    margin-top: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+/* Hero Section */
+.about-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018898/jujutsu-kaisen_fujthd.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  background-attachment: fixed;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 1));
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.about-badge {
+  display: inline-block;
+  background: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.about-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-title span {
+  color: var(--primary-color);
+  background: linear-gradient(to right, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+}
+
+/* Mission Section */
+.about-mission-section {
+  padding: 6rem 0;
+  background: var(--bg-color);
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.mission-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.mission-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-item span {
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+.mission-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+}
+
+.mission-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.image-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
+  z-index: 1;
+  filter: blur(40px);
+}
+
+/* Features Section */
+.about-features-section {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, var(--bg-color), #090e17);
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.features-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.features-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.feature-card p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.about-cta-section {
+  padding: 8rem 0;
+  text-align: center;
+  background: url('https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018712/attack-on-titan_dvmcgh.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.about-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.about-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-cta-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-cta-content p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+}
+
+.about-cta-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+  }
+  
+  .mission-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-hero {
+    height: 50vh;
+  }
 }

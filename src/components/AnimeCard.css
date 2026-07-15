@@ -15,9 +15,10 @@
 
 .card-image {
     height: 200px;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    object-position: center;
     transition: transform 0.5s ease;
+    display: block;
 }
 
 .anime-card:hover .card-image {
@@ -43,9 +44,8 @@
 .anime-card .card-image {
   width: 100%;
   aspect-ratio: 16/9;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.5s ease;
   min-height: 200px;
 }

@@ -14,14 +14,11 @@ export default function AnimeCard({ title, description, image, path }) {
       transition={{ duration: 0.5 }}
       whileHover={{ y: -10 }}
     >
-      <div
+      <img
         className="card-image"
-        style={{ 
-          backgroundImage: `url(${image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
+        src={image}
+        alt={title}
+        loading="lazy"
       />
       <div className="card-content">
         <h3>{title}</h3>

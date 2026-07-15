@@ -15,6 +15,7 @@ const TokyoRevengersImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v17
 const SoloLevelingImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019211/sung-jinwoo-purple_ppescj.jpg'
 const OnePunchManImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784019056/saitama-one-punch-man_lubkya.jpg'
 const DeathNoteImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018713/death-note-light_er1emq.jpg'
+const dragonBallImg = 'https://res.cloudinary.com/dzrgiefgf/image/upload/v1784018714/goku-vs-vegeta-_wnmuvk.jpg'
 
 export default function Anime() {
   return (
@@ -133,6 +134,13 @@ export default function Anime() {
             description="A high school genius stumbles upon a supernatural notebook that allows him to kill anyone by writing their name in it."
             image={DeathNoteImg}
             path="/death-note"
+          />
+
+          <AnimeCard
+            title="Dragon Ball Z"
+            description="Follow the adventures of Goku as he defends the Earth against an assortment of villains."
+            image={dragonBallImg}
+            path="/dragon-ball"
           />
         </div>
       </main>
