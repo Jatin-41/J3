@@ -133,7 +133,7 @@ export default function ChainsawMan() {
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             exit={{ opacity: 0 }} transition={{ duration: 0.3 }}
         >
-            <Link to="/" className="back-btn chainsaw">← Back</Link>
+            <Link to="/anime" className="back-btn chainsaw">← Back</Link>
 
             <div className="canvas-hero chainsaw" ref={heroRef}>
                 <canvas className="canvas-element" ref={canvasRef} />

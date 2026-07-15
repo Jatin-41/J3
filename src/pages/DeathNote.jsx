@@ -132,7 +132,7 @@ export default function DeathNote() {
       initial={{ opacity: 0 }} animate={{ opacity: 1 }}
       exit={{ opacity: 0 }} transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn death-note">← Back</Link>
+      <Link to="/anime" className="back-btn death-note">← Back</Link>
 
       <div className="canvas-hero death-note" ref={heroRef}>
         <canvas className="canvas-element" ref={canvasRef} />

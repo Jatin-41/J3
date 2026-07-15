@@ -132,7 +132,7 @@ export default function ClassroomElite() {
       initial={{ opacity: 0 }} animate={{ opacity: 1 }}
       exit={{ opacity: 0 }} transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn cote">← Back</Link>
+      <Link to="/anime" className="back-btn cote">← Back</Link>
 
       <div className="canvas-hero cote" ref={heroRef}>
         <canvas className="canvas-element" ref={canvasRef} />

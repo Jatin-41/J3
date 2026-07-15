@@ -155,7 +155,7 @@ export default function AttackOnTitan() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn attack-on-titan">← Back</Link>
+      <Link to="/anime" className="back-btn attack-on-titan">← Back</Link>
 
       <div className="canvas-hero attack-on-titan" ref={heroRef}>
         <canvas className="canvas-element" ref={canvasRef} />

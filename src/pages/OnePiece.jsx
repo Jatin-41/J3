@@ -168,7 +168,7 @@ export default function OnePiece() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn one-piece">
+      <Link to="/anime" className="back-btn one-piece">
         ← Back
       </Link>
       <div className="canvas-hero one-piece" ref={heroRef}>

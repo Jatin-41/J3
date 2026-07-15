@@ -167,7 +167,7 @@ export default function BakiHanma() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn baki-hanma">
+      <Link to="/anime" className="back-btn baki-hanma">
         ← Back
       </Link>
       <div className="canvas-hero baki-hanma" ref={heroRef}>

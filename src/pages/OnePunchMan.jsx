@@ -132,7 +132,7 @@ export default function OnePunchMan() {
       initial={{ opacity: 0 }} animate={{ opacity: 1 }}
       exit={{ opacity: 0 }} transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn opm">← Back</Link>
+      <Link to="/anime" className="back-btn opm">← Back</Link>
 
       <div className="canvas-hero opm" ref={heroRef}>
         <canvas className="canvas-element" ref={canvasRef} />

@@ -155,7 +155,7 @@ export default function DemonSlayer() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn demon-slayer">← Back</Link>
+      <Link to="/anime" className="back-btn demon-slayer">← Back</Link>
 
       <div className="canvas-hero demon-slayer" ref={heroRef}>
         <canvas className="canvas-element" ref={canvasRef} />

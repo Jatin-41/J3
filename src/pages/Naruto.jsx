@@ -173,7 +173,7 @@ export default function Naruto() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link to="/" className="back-btn naruto">
+      <Link to="/anime" className="back-btn naruto">
         ← Back
       </Link>
       <div className="canvas-hero naruto" ref={heroRef}>
